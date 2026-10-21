@@ -1,106 +1,50 @@
 # Philip Allen
 
-I design and run AI-assisted engineering projects — and the program-level workflows,
-guardrails, and delivery tracking that keep them honest.
+I run an independent research program on representation: how ideas get encoded so that machines and people can both work with them. It has three fronts. Maith builds machine-usable intermediate representations from formal mathematics. Ephapse reads machine-latent representations inside open-weight models. Idea Garden preserves human-legible representations: capture and curation for ideas. Rubato is the same program applied to music, an AI-native music format.
 
-**Saratoga Springs, NY** · Open to **AI Operations**, **AI Workflow Designer**, and
-**AI Technical Program Manager** roles.
+I direct the work and AI agents do most of the implementation; I spec, review, and verify. The discipline is the point: gates that tell a real result apart from a broken instrument, pre-registered falsifiers, append-only decision logs, and negative results kept on the record.
 
-[LinkedIn](https://linkedin.com/in/allenpd) · philip.d.allen@gmail.com
+**Saratoga Springs, NY** · [LinkedIn](https://www.linkedin.com/in/allenpd) · philip.d.allen@gmail.com
 
 ---
 
-## What I actually do
+## Public
 
-I build research projects where AI agents produce most of the code, and I treat the
-hard part as making that output *trustworthy* rather than merely fast. That means gates
-that tell a real result apart from a broken instrument, metrics that housekeeping cannot
-move, and a decision log that survives review.
+### [Maith](https://github.com/philipdallen/Maith)
 
-Five public repositories, all built in 2026 under my direction with agentic AI tooling.
-Each one solves a different part of the same problem: **how do you run work that an agent
-mostly executes, and still be able to stand behind its results?**
+A Lean 4 pipeline that extracts a canonical semantic IR from Mathlib and tests whether training language models on it helps. The record keeps its own corrections: the DEC-010 retraction of the first completion-accuracy results and the DEC-031 reset for split leakage stand in the README, not edited away. Current frontier: axiom discovery (DEC-036).
 
----
+### [PleaNP](https://github.com/philipdallen/PleaNP)
 
-## The projects
+Lean 4 / Mathlib infrastructure for the P vs NP barrier landscape, with the integrity gates that keep AI-assisted proof search honest. The oracle substrate and the BGS diagonalization module are machine-checked with zero `sorry`; relativization is a frozen statement with two tracked `sorry`s, scoped, not claimed complete.
 
-### Maith — [philipdallen/Maith](https://github.com/philipdallen/Maith)
+### [ephapse](https://github.com/philipdallen/ephapse)
 
-A Lean 4 pipeline that extracts a canonical semantic intermediate representation from
-formal mathematics, and tests whether training language models on it helps. It is also my
-longest-running experiment in directing agentic coding workflows.
+Probing open-weight model internals for cross-domain co-activation, as a candidate generator for mathematical hypotheses. Rung 3 is complete and returned an interpretable null: the positive control recovered, the real arm's best z of 3.7 fell below its family-wise cutoff. The DEC-043 composition-emergence line closed at Phase 1 on 2026-10-20 because its instrument failed its own positive control; the falsifiers fired and the record says so. Neither result is dressed up.
 
-The pipeline and corpus builder are the mature parts; the axiom-discovery search on top is
-the active frontier. When an earlier round of results did not survive stricter gates, I
-withdrew them under a documented reset notice rather than let them stand — that retraction
-is part of the repository's history, on purpose.
+### [rubato](https://github.com/philipdallen/rubato)
 
-### PleaNP — [philipdallen/PleaNP](https://github.com/philipdallen/PleaNP)
+An executable, AI-native music format: score plus interpretive prompt plus plaintext rights manifest. Format-first: musical decisions live in the spec, not in the tools. The sample CDN is live; no commercial sample library has been attained yet, and the log discloses that too.
 
-A Lean 4 / Mathlib formalization of the P vs NP barrier landscape, and the integrity gates
-that keep AI-assisted proof search honest.
+### [HuB](https://github.com/philipdallen/HuB)
 
-The oracle substrate (`P^A ⊆ NP^A`, both directions) and the BGS diagonalization module are
-machine-checked with zero `sorry`. Relativization is rendered as a frozen statement with two
-tracked `sorry`s, and natural proofs exists as statement specifications — scoped, not claimed
-as complete. The gates exist because a proof assistant will happily accept a proof of the
-wrong statement, and an agent will happily produce one.
-
-### ephapse — [philipdallen/ephapse](https://github.com/philipdallen/ephapse)
-
-Probing open-weight model internals — activations and sparse-autoencoder features — for
-cross-domain co-activation, as a candidate generator for mathematical hypotheses.
-
-Its distinguishing feature is a two-tier validation layer built to separate **instrument
-failure from phenomenon absence**. When the probe returned a clean null at 70M parameters,
-that layer is what made the null reportable instead of ambiguous. A rigorous negative
-result is a result.
-
-### rubato — [philipdallen/rubato](https://github.com/philipdallen/rubato)
-
-An executable, AI-native music format: a score, an interpretive prompt, and a plaintext
-rights manifest. A deterministic player is the free baseline; an LLM player performs the
-work inside the authored interpretive space.
-
-The design point is that "interpretation" is a first-class, authorable object rather than
-something left to a model's discretion — and that the deterministic path always exists as
-a reproducibility anchor.
+A read-only dashboard aggregating delivery status from the program's repos. The live state of everything above, in one place: the second click from this page.
 
 ---
 
-## Delivery and operations
+## Private (available on request)
 
-### HuB — [philipdallen/HuB](https://github.com/philipdallen/HuB) · [live dashboard](https://philipdallen.github.io/HuB/)
+These repositories are private. Each claim below is dated and checkable; I open the repos to serious readers on request.
 
-A read-only static dashboard that aggregates cross-repo delivery status from the four
-research repositories above, with a documented readiness framework and scheduled per-repo
-automation.
-
-This is the operations artifact: it reads each project's status log, renders readiness and
-flow, and is checked daily by a monitoring job that files an issue when the public artifact
-breaks. Field definitions live in a versioned contract, because I learned the hard way that
-a metric without a stated definition will eventually be moved by something that has nothing
-to do with the project it claims to measure.
-
----
-
-## How I work
-
-**Definitions before measurement.** Every published metric has a written definition, an
-owner, and a change process. If a definition changes, it is recorded and the discontinuity
-is visible — history is append-only and never edited to look better.
-
-**A check that cannot fail is not a check.** Monitoring and validation code ships with a
-self-test that proves each check fails on deliberately broken input.
-
-**Negative results are published.** A rigorous null is a finding. So is a retraction.
-
-**Honest about the tooling.** These repositories were built with agentic AI doing most of
-the code production, under my direction and review. I think that is the interesting part,
-not something to obscure: the skill on display is designing the workflow, the guardrails,
-and the verification — not typing every line.
+- **idea-garden**: the human-legible front of the program. A capture-and-curation system for ideas (gardener core, Android share capture, Tender proposal PRs). As of 2026-10-20 the live garden holds 49 inbox captures and 10 conservatory signatures.
+- **rorschach**: how LLM readings of ambiguous images diverge, and what the divergence carries. The headline result is stated with error bars and survives its own retractions (D-021/023/024).
+- **agent-method-experiment**: does a documented, structured multi-agent method beat a solo agent on identical frozen tasks? Two pilot pairs are complete; both returned the pre-registered outcome `no_clear_effect`, with both arms at the acceptance ceiling. The confirmatory run has not been run.
+- **recon-task, recon-task-b, recon-task-v2, recon-task-b-v2**: the frozen seed repos for that experiment, one pair per iteration. The two arms differ only by the method file under test.
+- **well-tempered-model**: a prelude-and-fugue probe of sampling temperature as a model's temperament. A full trial (10 temperatures, 5 reps, 100 calls) is authorized in the repo's protocol and not yet run on main; pilot results are labeled probes, not claims.
+- **memory-palace**: the visual arm of the program. Rooms and artifacts built in staged passes under a shared legend, with fixture-gated checks.
+- **logos**: a two-agent emergent-communication experiment. Designed and specified; not yet run.
+- **wmfallen**: selected applied work outside the program: a headless inventory manager built for a family antiques business, live against the same CMS, with phone photo upload and HTTP-level tests.
 
 ---
 
-*All five repositories are 2026 – present.*
+Open to music technology and systems/integration roles, research collaborations, and fellowships. Private repos open on request.
