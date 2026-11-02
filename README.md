@@ -16,23 +16,23 @@ New here? Start with Rubato for the concrete version, or HuB for the live state 
 
 ### [Maith](https://github.com/philipdallen/Maith)
 
-A pipeline in Lean 4 (a proof assistant: software that checks mathematical proofs mechanically) that converts mathematics from a large formal library into a structured form a language model can train on, and tests whether that helps the model prove theorems. The record keeps its own corrections: the retraction of the first accuracy results and a later reset, after data leakage was found, both stand in the README, not edited away. Current frontier: axiom discovery.
+A pipeline in Lean 4 (a proof assistant: software that checks mathematical proofs mechanically) that converts mathematics from a large formal library into a structured form a language model can train on, and tests whether that helps the model prove theorems. The record keeps its own corrections: the retraction of the first accuracy results and a later reset, after data leakage was found, both stand in the README, not edited away. [[1]](https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/docs/decisions/LOG.md) [[2]](https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/status/trl.json) Current frontier: axiom discovery. [[3]](https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/docs/decisions/LOG.md)
 
 ### [PleaNP](https://github.com/philipdallen/PleaNP)
 
-Formal-mathematics infrastructure for the barriers around the P vs NP problem: the theorems showing which kinds of proof attempts provably cannot settle the question. The foundations are machine-checked with no admitted gaps. The main barrier result is written down exactly, with its two admitted gaps tracked openly; it is not claimed as proved.
+Formal-mathematics infrastructure for the barriers around the P vs NP problem: the theorems showing which kinds of proof attempts provably cannot settle the question. The foundations are machine-checked with no admitted gaps. [[4]](https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/decisions/LOG.md) The main barrier result is written down exactly, with its two admitted gaps tracked openly; it is not claimed as proved. [[5]](https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/SORRY_TRACKER.md)
 
 ### [ephapse](https://github.com/philipdallen/ephapse)
 
-Looks inside open-weight AI models for an accident: two unrelated inputs switching on the same internal feature, which might point at a connection nobody was looking for. The results so far are honest nulls. The largest probe found nothing above the threshold set in advance, while its control test proved the detector worked. A second line closed on 2026-10-20 because its measuring instrument failed its own control test. Neither result is dressed up.
+Looks inside open-weight AI models for an accident: two unrelated inputs switching on the same internal feature, which might point at a connection nobody was looking for. The results so far are honest nulls. The largest probe found nothing above the threshold set in advance, while its control test proved the detector worked. [[6]](https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/experiments/2026-10-19-rung3-probe-results.json) [[7]](https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/experiments/2026-10-19-rung3-positive-control-results.json) A second line closed on 2026-10-20 because its measuring instrument failed its own control test. [[8]](https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/experiments/2026-10-20-composition-phase1-probe-results.json) [[9]](https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/docs/decisions/LOG.md) Neither result is dressed up.
 
 ### [rubato](https://github.com/philipdallen/rubato)
 
-An executable, AI-native music format: the score, plus a written brief for how it should be played, plus a plain-text record of who owns the rights. Format-first: musical decisions live in the specification, not in the tools. The sample library is served from a live CDN; no commercial sample library has been attained yet, and the log discloses that too.
+An executable, AI-native music format: the score, plus a written brief for how it should be played, plus a plain-text record of who owns the rights. Format-first: musical decisions live in the specification, not in the tools. [[10]](https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/FORMAT_SPEC.md) [[11]](https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/SCHEMA_SPEC.md) The sample library is served from a live CDN; no commercial sample library has been attained yet, and the log discloses that too. [[12]](https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/tools/muse_cdn/RUNBOOK.md) [[13]](https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/docs/design/l5-sample-waiver.md) [[14]](https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/docs/decision-log.md)
 
 ### [HuB](https://github.com/philipdallen/HuB)
 
-A read-only dashboard aggregating delivery status from the program's repos. The live state of everything above, in one place: the second click from this page.
+A read-only dashboard aggregating delivery status from the program's repos. The live state of everything above, in one place: the second click from this page. [[15]](https://github.com/philipdallen/HuB/blob/40ca2d84001bc76a1edefc10bf8b8f99f271d73e/README.md)
 
 ---
 
@@ -52,3 +52,25 @@ These repositories are private. Each claim below is dated; I open the repos to s
 ---
 
 Open to music technology and systems/integration roles, research collaborations, and fellowships. Private repos open on request.
+
+---
+
+## References
+
+Every load-bearing claim in the Public section above is backed by an artifact pinned to a commit SHA, so it can be checked without trusting the prose. This layer covers public work only; the Private section carries no citations by design.
+
+1. **Maith — retraction of the first accuracy results.** `docs/decisions/LOG.md`, decision DEC-010 (retraction) — https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/docs/decisions/LOG.md
+2. **Maith — reset after the leak was found.** `status/trl.json` (technology-readiness state) — https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/status/trl.json
+3. **Maith — axiom-discovery track opened.** `docs/decisions/LOG.md`, decision DEC-036 (2026-09-15) — https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/docs/decisions/LOG.md
+4. **PleaNP — foundations machine-checked.** `docs/decisions/LOG.md`, decision DEC-027 (packaging) — https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/decisions/LOG.md
+5. **PleaNP — admitted gaps tracked openly.** `docs/SORRY_TRACKER.md` (per-file `sorry` inventory, machine-checked by `tooling/gates/sorry_tracker_scan.py`) — https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/SORRY_TRACKER.md
+6. **ephapse — largest probe returned a null.** `experiments/2026-10-19-rung3-probe-results.json` — https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/experiments/2026-10-19-rung3-probe-results.json
+7. **ephapse — the control test proved the detector worked.** `experiments/2026-10-19-rung3-positive-control-results.json` — https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/experiments/2026-10-19-rung3-positive-control-results.json
+8. **ephapse — second line closed on 2026-10-20.** `experiments/2026-10-20-composition-phase1-probe-results.json` — https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/experiments/2026-10-20-composition-phase1-probe-results.json
+9. **ephapse — the composition line, DEC-043.** `docs/decisions/LOG.md`, decision DEC-043 — https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/docs/decisions/LOG.md
+10. **rubato — the format is executable and specification-first.** `FORMAT_SPEC.md` — https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/FORMAT_SPEC.md
+11. **rubato — score, playing brief, and rights record as schema.** `SCHEMA_SPEC.md` — https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/SCHEMA_SPEC.md
+12. **rubato — sample library served from a live CDN.** `tools/muse_cdn/RUNBOOK.md` — https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/tools/muse_cdn/RUNBOOK.md
+13. **rubato — no commercial sample library attained (waiver).** `docs/design/l5-sample-waiver.md` — https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/docs/design/l5-sample-waiver.md
+14. **rubato — the log discloses the sample gap.** `docs/decision-log.md` — https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/docs/decision-log.md
+15. **HuB — read-only delivery dashboard.** `README.md`; live at https://philipdallen.github.io/HuB/ — https://github.com/philipdallen/HuB/blob/40ca2d84001bc76a1edefc10bf8b8f99f271d73e/README.md
