@@ -16,23 +16,23 @@ New here? Start with Rubato for the concrete version, or HuB for the live state 
 
 ### [Maith](https://github.com/philipdallen/Maith)
 
-A pipeline in Lean 4 (a proof assistant: software that checks mathematical proofs mechanically) that converts mathematics from a large formal library into a structured form a language model can train on, and tests whether that helps the model prove theorems. The record keeps its own corrections: the retraction of the first accuracy results and a later reset, after data leakage was found, both stand in the README, not edited away. Current frontier: axiom discovery.
+A pipeline in Lean 4 (a proof assistant: software that checks mathematical proofs mechanically) that converts mathematics from a large formal library into a structured form a language model can train on, and tests whether that helps the model prove theorems. The record keeps its own corrections: the retraction of the first accuracy results [1] and a later reset, after data leakage was found [2], both stand in the README, not edited away [3][4]. Current frontier: axiom discovery [5].
 
 ### [PleaNP](https://github.com/philipdallen/PleaNP)
 
-Formal-mathematics infrastructure for the barriers around the P vs NP problem: the theorems showing which kinds of proof attempts provably cannot settle the question. The foundations are machine-checked with no admitted gaps. The main barrier result is written down exactly, with its two admitted gaps tracked openly; it is not claimed as proved.
+Formal-mathematics infrastructure for the barriers around the P vs NP problem: the theorems showing which kinds of proof attempts provably cannot settle the question. The foundations are machine-checked with no admitted gaps [6]. The main barrier result is written down exactly, with its two admitted gaps tracked openly; it is not claimed as proved [7][8].
 
 ### [ephapse](https://github.com/philipdallen/ephapse)
 
-Looks inside open-weight AI models for an accident: two unrelated inputs switching on the same internal feature, which might point at a connection nobody was looking for. The results so far are honest nulls. The largest probe found nothing above the threshold set in advance, while its control test proved the detector worked. A second line closed on 2026-10-20 because its measuring instrument failed its own control test. Neither result is dressed up.
+Looks inside open-weight AI models for an accident: two unrelated inputs switching on the same internal feature, which might point at a connection nobody was looking for. The results so far are honest nulls. The largest probe found nothing above the threshold set in advance, while its control test proved the detector worked [9]. A second line closed on 2026-10-20 because its measuring instrument failed its own control test [10][11]. Neither result is dressed up.
 
 ### [rubato](https://github.com/philipdallen/rubato)
 
-An executable, AI-native music format: the score, plus a written brief for how it should be played, plus a plain-text record of who owns the rights. Format-first: musical decisions live in the specification, not in the tools. The sample library is served from a live CDN; no commercial sample library has been attained yet, and the log discloses that too.
+An executable, AI-native music format: the score, plus a written brief for how it should be played, plus a plain-text record of who owns the rights. Format-first: musical decisions live in the specification, not in the tools [12]. The sample library is served from a live CDN [13]; no commercial sample library has been attained yet, and the log discloses that too [14].
 
 ### [HuB](https://github.com/philipdallen/HuB)
 
-A read-only dashboard aggregating delivery status from the program's repos. The live state of everything above, in one place: the second click from this page.
+A read-only dashboard aggregating delivery status from the program's repos. The live state of everything above, in one place: the second click from this page [15][16].
 
 ---
 
@@ -52,3 +52,26 @@ These repositories are private. Each claim below is dated; I open the repos to s
 ---
 
 Open to music technology and systems/integration roles, research collaborations, and fellowships. Private repos open on request.
+
+---
+
+## References
+
+Each reference pins the artifact behind a claim in the Public section to the commit it was read at, so the claim can be checked against the record rather than the prose. Bracketed numbers in the Public section match this list. Private-repo claims are not referenced; see the note in that section.
+
+1. Maith — retraction of the first completion-accuracy results: `docs/decisions/LOG.md`, DEC-010. <https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/docs/decisions/LOG.md?plain=1#L355>
+2. Maith — reset of the comparison runs after data leakage: `docs/decisions/LOG.md`, DEC-031. <https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/docs/decisions/LOG.md?plain=1#L1765>
+3. Maith — the retraction standing in the README: `README.md`, known-limitations section. <https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/README.md?plain=1#L378>
+4. Maith — the reset notice standing in the README: `README.md`. <https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/README.md?plain=1#L29>
+5. Maith — current frontier, axiom discovery: `README.md`, active-track block. <https://github.com/philipdallen/Maith/blob/482b03e62d22bdb1ceeb5603776e46ef79d576a8/README.md?plain=1#L18>
+6. PleaNP — foundations machine-checked with no admitted gaps: `docs/SORRY_TRACKER.md`, summary. <https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/SORRY_TRACKER.md?plain=1#L11>
+7. PleaNP — the barrier statement's tracked gaps: `docs/SORRY_TRACKER.md`, totals. <https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/SORRY_TRACKER.md?plain=1#L20>
+8. PleaNP — the barrier statement written exactly: `docs/STATEMENTS/Relativization.md`. <https://github.com/philipdallen/PleaNP/blob/d141bdcdc832039a7fb1fd7a5df43f7083769600/docs/STATEMENTS/Relativization.md>
+9. ephapse — the largest probe's clean null, with the control recovered: `findings.jsonl`, record for issue #145 (2026-10-19). <https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/findings.jsonl#L105>
+10. ephapse — the composition line, DEC-043: `docs/decisions/LOG.md`. <https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/docs/decisions/LOG.md?plain=1#L2401>
+11. ephapse — the instrument-failure close on 2026-10-20: `findings.jsonl`, record for issue #161. <https://github.com/philipdallen/ephapse/blob/9ae5256bd9dd00aef364a8235b6e97b67baab406/findings.jsonl#L107>
+12. rubato — the format specification: `FORMAT_SPEC.md`. <https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/FORMAT_SPEC.md>
+13. rubato — the live sample-library CDN: `tools/muse_cdn/README.md`. <https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/tools/muse_cdn/README.md?plain=1#L8>
+14. rubato — no commercial sample library attained yet: `docs/decision-log.md`, open item O2. <https://github.com/philipdallen/rubato/blob/c522a1736d575813aab0d7e81f6b8228e0577b1f/docs/decision-log.md?plain=1#L41>
+15. HuB — the live dashboard. <https://philipdallen.github.io/HuB/>
+16. HuB — the repository: `README.md`. <https://github.com/philipdallen/HuB/blob/61fb85552386e3a693d23b9bc514e73c69852903/README.md>
